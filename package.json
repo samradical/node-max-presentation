@@ -1,0 +1,123 @@
+{
+	"name": "max-app-rad",
+	"version": "0.0.1",
+	"description": "",
+	"main": "app://radmix/index.html",
+	"author": "samelie",
+	"license": "MIT",
+	"readmeFilename": "README.md",
+	"repository": {
+		"type": "git"
+	},
+	"window": {
+		"toolbar": true,
+		"resizable": true,
+		"width": 1280,
+		"height": 720
+	},
+	"browser": {
+		"jquery": "./assets/vendor/jquery/jquery.min.js",
+		"lodash": "./assets/vendor/lodash/lodash.min.js",
+		"backbone": "./assets/vendor/backbone/backbone.js",
+		"marionette": "./assets/vendor/marionette/lib/backbone.marionette.js",
+		"templates": "./assets/js/templates.js",
+		"datgui": "./assets/vendor/dat-gui/build/dat.gui.min.js",
+		"backboneRouting": "./assets/vendor/backbone-query-parameters/backbone.queryparams.js",
+		"q": "./assets/vendor/q/q.js",
+		"signals": "./assets/vendor/signals/dist/signals.min.js",
+		"rivets": "./assets/vendor/rivets/dist/rivets.bundled.min.js"
+	},
+	"browserify": {
+		"transform": [
+			"browserify-shim"
+		]
+	},
+	"browserify-shim": {
+		"jquery": "$",
+		"lodash": "_",
+		"datgui": "global:datgui",
+		"signals": {
+			"exports": "signals"
+		},
+		"rivets": {
+			"exports": "rivets"
+		},
+		"imagesloaded": {
+			"exports": "IMG",
+			"depends": ["eventie", "eventEmitter"]
+		},
+		"backbone": {
+			"exports": "Backbone",
+			"depends": ["lodash", "jquery"]
+		},
+		"marionette": {
+			"exports": "Marionette",
+			"depends": ["backbone"]
+		},
+		"templates": {
+			"exports": "global:templates",
+			"depends": ["lodash"]
+		},
+		"backboneRouting": {
+			"depends": ["backbone"]
+		},
+		"q": {
+			"depends": ["jquery"],
+			"exports": "Q"
+		}
+	},
+	"devDependencies": {
+		"browserify": "^4.1.9",
+		"browserify-shim": "^3.6.0",
+		"chai": "^1.9.1",
+		"chalk": "^0.4.0",
+		"gulp": "^3.8.0",
+		"gulp-autoprefixer": "^0.0.7",
+		"gulp-load-plugins": "^0.5.0",
+		"gulp-connect": "^2.0.5",
+		"gulp-concat": "^2.2.0",
+		"gulp-jst-concat": "^0.0.1",
+		"gulp-csslint": "^0.1.4",
+		"gulp-if": "^1.2.1",
+		"gulp-jshint": "^1.6.2",
+		"gulp-minify-css": "^0.3.4",
+		"gulp-jsonminify": "0.0.1",
+		"gulp-rename": "^1.2.0",
+		"gulp-rework": "^0.2.2",
+		"gulp-streamify": "^0.0.5",
+		"gulp-strip-debug": "^0.3.0",
+		"gulp-uglify": "^0.3.0",
+		"gulp-plumber": "^0.6.1",
+		"gulp-stylus": "~1.0.0",
+		"gulp-zip": "^2.0.2",
+		"gulp-iconfont": "^0.2.1",
+        "gulp-iconfont-css": "0.0.9",
+		"jshint-stylish": "^0.2.0",
+		"mocha": "^1.20.1",
+		"rework-breakpoints": "~0.6.0",
+		"rework-clearfix": "~1.0.0",
+		"rework-suit": "~2.0.0",
+		"remapify": "^0.1.6",
+		"vinyl-source-stream": "^0.1.1",
+		"connect-history-api-fallback": "^0.0.4",
+		"collections": "^1.2.1",
+		"youtube-dl": "latest",
+		"ytdl-core": "latest",
+		"request": "latest",
+		"lodash": "latest",
+		"q": "latest",
+		"shelljs": "latest",
+		"node-dir": "latest",
+		"node-webkit-builder": "latest",
+		"fluent-ffmpeg": "latest",
+		"exec": "latest",
+		"express": "latest",
+		"ect": "latest",
+		"cors": "*",
+		"socket.io": "latest",
+		"omgosc": "latest",
+		"ws": "latest",
+		"connect-busboy":"latest",
+		"fs.extra":"latest"
+	}
+}
